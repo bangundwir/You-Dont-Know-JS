@@ -44,9 +44,8 @@ Lebih jauh menjauhkan bahasa dari merek dagang milik Oracle, nama resmi bahasa y
 Dengan kata lain, JavaScript / JS yang berjalan di browser atau di Node.js, adalah * sebuah implementasi * dari ES2019 standar.
 
 | CATATAN: |
-| :--- |
-| Jangan gunakan istilah seperti "JS6" atau "ES8" untuk merujuk ke bahasa tersebut. Beberapa memang begitu,tetapi istilah-istilah itu hanya akan mengabadikan kebingungan."ES20xx" atau hanya "JS" adalah yang harus Anda patuhi.|
-|
+| : --- |
+| Jangan gunakan istilah seperti "JS6" atau "ES8" untuk merujuk ke bahasa tersebut. Beberapa memang begitu, tetapi istilah-istilah itu hanya akan mengabadikan kebingungan. "ES20xx" atau hanya "JS" adalah yang harus Anda patuhi. |
 
 Apakah Anda menyebutnya JavaScript, JS, ECMAScript, atau ES2019, itu pasti bukan varian dari bahasa Java
 
@@ -86,45 +85,45 @@ Itu berarti Anda bisa mempelajari **satu JS**, dan mengandalkan JS yang sama di 
 
 ### The Web Rules Everything About (JS)
 
-While the array of environments that run JS is constantly expanding (from browsers, to servers (Node.js), to robots, to lightbulbs, to...), the one environment that rules JS is the web. In other words, how JS is implemented for web browsers is, in all practicality, the only reality that matters.
+Sementara array lingkungan yang menjalankan JS terus berkembang (dari browser, ke server (Node.js), ke robot, ke bola lampu, ke ...), satu lingkungan yang mengatur JS adalah web. Dengan kata lain, bagaimana JS diterapkan untuk browser web, dalam semua kepraktisan, satu-satunya kenyataan yang penting.
 
-For the most part, the JS defined in the specification and the JS that runs in browser-based JS engines is the same. But there are some differences that must be considered.
+Untuk sebagian besar, JS yang ditentukan dalam spesifikasi dan JS yang berjalan di mesin JS berbasis browser adalah sama. Namun ada beberapa perbedaan yang harus diperhatikan.
 
-Sometimes the JS specification will dictate some new or refined behavior, and yet that won't exactly match with how it works in browser-based JS engines. Such a mismatch is historical: JS engines have had 20+ years of observable behaviors around corner cases of features that have come to be relied on by web content. As such, sometimes the JS engines will refuse to conform to a specification-dictated change because it would break that web content.
+Kadang-kadang spesifikasi JS akan menentukan beberapa perilaku baru atau yang disempurnakan, namun itu tidak sama persis dengan cara kerjanya di mesin JS berbasis browser. Ketidakcocokan seperti itu bersifat historis: Mesin JS telah memiliki 20+ tahun perilaku yang dapat diamati di sekitar kasus sudut fitur yang telah diandalkan oleh konten web. Dengan demikian, terkadang mesin JS akan menolak untuk mengikuti perubahan yang ditentukan spesifikasi karena akan merusak konten web tersebut.
 
-In these cases, often TC39 will backtrack and simply choose to conform the specification to the reality of the web. For example, TC39 planned to add a `contains(..)` method for Arrays, but it was found that this name conflicted with old JS frameworks still in use on some sites, so they changed the name to a non-conflicting `includes(..)`. The same happened with a comedic/tragic JS *community crisis* dubbed "smooshgate," where the planned `flatten(..)` method was eventually renamed `flat(..)`.
+Dalam kasus ini, TC39 sering kali akan mundur dan hanya memilih untuk menyesuaikan spesifikasi dengan kenyataan di web. Misalnya, TC39 berencana untuk menambahkan metode `berisi (..)` untuk Array, tetapi ditemukan bahwa nama ini bertentangan dengan kerangka kerja JS lama yang masih digunakan di beberapa situs, jadi mereka mengubah nama menjadi non-konflik `termasuk (..) `. Hal yang sama terjadi dengan komedi / krisis komunitas JS *tragis* yang dijuluki "smooshgate," di mana metode `flatten (..)` yang direncanakan akhirnya diganti namanya menjadi `flat (..)`.
 
-But occasionally, TC39 will decide the specification should stick firm on some point even though it is unlikely that browser-based JS engines will ever conform.
+Tetapi kadang-kadang, TC39 akan memutuskan bahwa spesifikasi harus tetap kokoh pada beberapa hal meskipun mesin JS berbasis browser tidak akan pernah sesuai.
 
-The solution? Appendix B, "Additional ECMAScript Features for Web Browsers".[^specApB] The JS specification includes this appendix to detail out any known mismatches between the official JS specification and the reality of JS on the web. In other words, these are exceptions that are allowed *only* for web JS; other JS environments must stick to the letter of the law.
+Solusinya? Lampiran B, "Fitur ECMAScript Tambahan untuk Browser Web". [^SpecApB] Spesifikasi JS menyertakan lampiran ini untuk merinci ketidakcocokan yang diketahui antara spesifikasi JS resmi dan realitas JS di web. Dengan kata lain, ini adalah pengecualian yang diizinkan *hanya* untuk JS web; lingkungan JS lainnya harus berpegang pada ketentuan hukum.
 
-Section B.1 and B.2 cover *additions* to JS (syntax and APIs) that web JS includes, again for historical reasons, but which TC39 does not plan to formally specify in the core of JS. Examples include `0`-prefixed octal literals, the global `escape(..)` / `unescape(..)` utilities, String "helpers" like `anchor(..)` and `blink()`, and the RegExp `compile(..)` method.
+Bagian B.1 dan B.2 mencakup *tambahan* ke JS (sintaks dan API) yang disertakan JS web, sekali lagi karena alasan historis, tetapi TC39 tidak berencana untuk secara resmi menentukan inti JS. Contohnya mencakup literal oktal dengan awalan `0`, utilitas` escape (..) `global (..)` / `unescape (..)`, String "pembantu" seperti `anchor (..)` dan `blink ()`, dan RegExp `compile (..)` metode.
 
-Section B.3 includes some conflicts where code may run in both web and non-web JS engines, but where the behavior *could* be observably different, resulting in different outcomes. Most of the listed changes involve situations that are labeled as early errors when code is running in strict mode.
+Bagian B.3 mencakup beberapa konflik di mana kode dapat berjalan di mesin JS web dan non-web, tetapi di mana perilakunya *dapat* terlihat berbeda, menghasilkan hasil yang berbeda. Sebagian besar perubahan yang terdaftar melibatkan situasi yang diberi label sebagai kesalahan awal saat kode dijalankan dalam mode ketat.
 
-Appendix B *gotchas* aren't encountered very often, but it's still a good idea to avoid these constructs to be future safe. Wherever possible, adhere to the JS specification and don't rely on behavior that's only applicable in certain JS engine environments.
+Lampiran B *gotcha* tidak terlalu sering ditemui, tetapi sebaiknya hindari konstruksi ini agar aman di masa mendatang. Jika memungkinkan, patuhi spesifikasi JS dan jangan mengandalkan perilaku yang hanya berlaku di lingkungan mesin JS tertentu.
 
-### Not All (Web) JS...
+### Tidak Semua (Web) JS ...
 
-Is this code a JS program?
+Apakah kode ini program JS?
 
 ```js
 alert("Hello, JS!");
 ```
 
-Depends on how you look at things. The `alert(..)` function shown here is not included in the JS specification, but it *is* in all web JS environments. Yet, you won't find it in Appendix B, so what gives?
+Tergantung bagaimana Anda memandang sesuatu. Fungsi `alert (..)` yang ditampilkan di sini tidak termasuk dalam spesifikasi JS, tetapi *adalah* di semua lingkungan JS web. Namun, Anda tidak akan menemukannya di Lampiran B, jadi apa yang menyebabkannya?
 
-Various JS environments (like browser JS engines, Node.js, etc.) add APIs into the global scope of your JS programs that give you environment-specific capabilities, like being able to pop an alert-style box in the user's browser.
+Berbagai lingkungan JS (seperti mesin JS browser, Node.js, dll.) Menambahkan API ke dalam cakupan global program JS Anda yang memberi Anda kemampuan khusus lingkungan, seperti dapat memunculkan kotak bergaya peringatan di browser pengguna
 
-In fact, a wide range of JS-looking APIs, like `fetch(..)`, `getCurrentLocation(..)`, and `getUserMedia(..)`, are all web APIs that look like JS. In Node.js, we can access hundreds of API methods from various built-in modules, like `fs.write(..)`.
+Faktanya, berbagai API yang terlihat JS, seperti `fetch (..)`, `getCurrentLocation (..)`, dan `getUserMedia (..)`, semuanya adalah web API yang terlihat seperti JS. Di Node.js, kita dapat mengakses ratusan metode API dari berbagai modul built-in, seperti `fs.write (..)`.
 
-Another common example is `console.log(..)` (and all the other `console.*` methods!). These are not specified in JS, but because of their universal utility are defined by pretty much every JS environment, according to a roughly agreed consensus.
+Contoh umum lainnya adalah `console.log (..)` (dan semua metode `console. *` Lainnya!). Ini tidak ditentukan di JS, tetapi karena utilitas universal mereka ditentukan oleh hampir semua lingkungan JS, menurut konsensus yang disepakati secara kasar.
 
-So `alert(..)` and `console.log(..)` are not defined by JS. But they *look* like JS. They are functions and object methods and they obey JS syntax rules. The behaviors behind them are controlled by the environment running the JS engine, but on the surface they definitely have to abide by JS to be able to play in the JS playground.
+Jadi `alert (..)` dan `console.log (..)` tidak ditentukan oleh JS. Tapi mereka *terlihat* seperti JS. Mereka adalah fungsi dan metode objek dan mereka mematuhi aturan sintaks JS. Perilaku di belakang mereka dikendalikan oleh lingkungan yang menjalankan mesin JS, tetapi di permukaan mereka pasti harus mematuhi JS untuk dapat bermain di taman bermain JS ..
 
-Most of the cross-browser differences people complain about with "JS is so inconsistent!" claims are actually due to differences in how those environment behaviors work, not in how the JS itself works.
+Sebagian besar perbedaan lintas browser yang dikeluhkan orang dengan "JS sangat tidak konsisten!" klaim sebenarnya disebabkan oleh perbedaan cara kerja perilaku lingkungan tersebut, bukan cara kerja JS itu sendiri.
 
-So an `alert(..)` call *is* JS, but `alert` itself is really just a guest, not part of the official JS specification.
+Jadi panggilan `alert (..)` *adalah* JS, tetapi `alert` itu sendiri sebenarnya hanya tamu, bukan bagian dari spesifikasi JS resmi.
 
 ### It's Not Always JS
 
