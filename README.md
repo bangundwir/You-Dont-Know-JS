@@ -7,6 +7,7 @@ This is a series of books diving deep into the core mechanisms of the JavaScript
 
 **To read more about the motivations and perspective behind this book series, check out the [Preface](preface.md).**
 _Read this in other languages:_
+
 [_Bahasa Indonesia_](README.id-ID.md)
 
 If you're looking for the previous **first edition** books, [they can be found here](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md).
