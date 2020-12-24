@@ -12,7 +12,7 @@
 
 * [Foreword](foreword.id-ID.md) (by [Brian Holt](https://twitter.com/holtbt))
 * [Preface](../preface.id-ID.md)
-* [Chapter 1: What Is JavaScript?](ch1.md)
+* [Chapter 1: What Is JavaScript?](ch1.id-ID.md)
 * [Chapter 2: Surveying JS](ch2.md)
 * [Chapter 3: Digging to the Roots of JS](ch3.md)
 * [Chapter 4: The Bigger Picture](ch4.md)
