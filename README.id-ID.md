@@ -27,7 +27,7 @@ Saya ingin menyampaikan terima kasih kepada Marc Grabanski dan seluruh tim Front
 
 Saya merekomendasikan membaca **second edition** dalam list dibawah ini:
 
-* [Get Started](get-started/README.md) | [Buy on Leanpub](https://leanpub.com/ydkjsy-get-started) | [Buy on Amazon](https://www.amazon.com/dp/B084BNMN7T)
+* [Get Started](get-started/README.id-ID.md) | [Buy on Leanpub](https://leanpub.com/ydkjsy-get-started) | [Buy on Amazon](https://www.amazon.com/dp/B084BNMN7T)
 * [Scope & Closures](scope-closures/README.md) | [Buy on Leanpub](https://leanpub.com/ydkjsy-scope-closures) | [Buy on Amazon](https://www.amazon.com/dp/B08634PZ3N)
 * Objects & Classes (not yet started)
 * Types & Grammar (not yet started)
