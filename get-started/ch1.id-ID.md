@@ -45,8 +45,7 @@ Dengan kata lain, JavaScript / JS yang berjalan di browser atau di Node.js, adal
 
 | CATATAN: |
 | :--- |
-| Jangan gunakan istilah seperti "JS6" atau "ES8" untuk merujuk ke bahasa tersebut. Beberapa memang begitu,tetapi istilah-istilah itu hanya akan mengabadikan kebingungan.|
-|"ES20xx" atau hanya "JS" adalah yang harus Anda patuhi.|
+| Jangan gunakan istilah seperti "JS6" atau "ES8" untuk merujuk ke bahasa tersebut. Beberapa memang begitu,tetapi istilah-istilah itu hanya akan mengabadikan kebingungan."ES20xx" atau hanya "JS" adalah yang harus Anda patuhi.|
 |
 
 Apakah Anda menyebutnya JavaScript, JS, ECMAScript, atau ES2019, itu pasti bukan varian dari bahasa Java
