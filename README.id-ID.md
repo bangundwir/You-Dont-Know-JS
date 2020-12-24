@@ -5,7 +5,7 @@ Ini adalah seri buku yang mendalami mekanisme inti bahasa JavaScript. Ini adalah
 <a href="https://leanpub.com/ydkjsy-get-started"><img src="get-started/images/cover.png" width="75"></a>&nbsp;&nbsp;
 <a href="https://leanpub.com/ydkjsy-scope-closures"><img src="scope-closures/images/cover.png" width="75"></a>&nbsp;&nbsp;...
 
-**Untuk membaca lebih lanjut tentang motivasi dan perspektif di balik seri buku ini, lihat [Preface](preface.md).**
+**Untuk membaca lebih lanjut tentang motivasi dan perspektif di balik seri buku ini, lihat [Preface](preface.id-ID.md).**
 
 Jika Anda mencari buku edisi **first edition** sebelumnya, [Anda dapat mencarinya di sini.](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md).
 
